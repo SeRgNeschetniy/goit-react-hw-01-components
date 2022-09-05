@@ -7,7 +7,7 @@ export const FriendList = ({ friends }) => {
     <ul className={css.friendsList}>
       {friends.map(({ id, avatar, name, isOnline }) => {
         return (
-          <Friend id={id} avatar={avatar} name={name} isOnline={isOnline} />
+          <Friend key={id} avatar={avatar} name={name} isOnline={isOnline} />
         );
       })}
     </ul>
@@ -17,10 +17,10 @@ export const FriendList = ({ friends }) => {
 FriendList.propTypes = {
   friends: PropTypes.arrayOf(
     PropTypes.exact({
-      id: PropTypes.number.isRequired,
-      avatar: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-      isOnline: PropTypes.bool.isRequired,
+      id: PropTypes.number,
+      avatar: PropTypes.string,
+      name: PropTypes.string,
+      isOnline: PropTypes.bool,
     })
   ),
 };

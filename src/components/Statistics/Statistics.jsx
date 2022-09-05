@@ -9,10 +9,10 @@ function randomColor() {
 }
 
 export const Statistics = ({ title, stats }) => (
-  <section class={css.statistics}>
-    <h2 class={css.title}>{title}</h2>
+  <section className={css.statistics}>
+    <h2 className={css.title}>{title}</h2>
 
-    <ul class={css.statList}>
+    <ul className={css.statList}>
       {stats.map(stat => {
         return (
           <li key={stat.id} style={{ backgroundColor: randomColor() }}>
